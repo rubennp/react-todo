@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');  // ES6 sintax equal to var Route = require('react-router').Route; etc...
 
+var TodoApp = require('TodoApp');
 // Load foundation
 
 jQuery(document).ready(function($) {
@@ -12,6 +13,6 @@ jQuery(document).ready(function($) {
 require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
-  <p>Simple Todo React App</p>,
+  <TodoApp />,
   document.getElementById('app')
 );
