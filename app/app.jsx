@@ -12,6 +12,6 @@ jQuery(document).ready(function($) {
 require('style!css!sass!applicationStyles');
 
 ReactDOM.render(
-  <p>React Boilerplate Project</p>,
+  <p>Simple Todo React App</p>,
   document.getElementById('app')
 );

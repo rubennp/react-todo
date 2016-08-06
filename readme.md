@@ -1,1 +1,1 @@
-React Boilerplate Project
+Simple Todo React App
