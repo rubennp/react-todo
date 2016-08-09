@@ -3,8 +3,20 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');  // ES6 sintax equal to var Route = require('react-router').Route; etc...
 
 var TodoApp = require('TodoApp');
-// Load foundation
 
+var actions = require('actions');
+var store = require('configureStore').configure();
+
+store.subscribe(() =>{
+  console.log('New state', store.getState());
+});
+
+store.dispatch(actions.addTodo('Clean the yard'));
+store.dispatch(actions.setSearchText('yard'));
+store.dispatch(actions.toggleShowCompleted());
+
+
+// Load foundation
 jQuery(document).ready(function($) {
   $(document).foundation();
 }); // $(document).foundation();
