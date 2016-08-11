@@ -48,10 +48,10 @@ export var addTodos = (todos) => {
   };
 };
 
-// startAddTodos
 export var startAddTodos = () => {
   return (dispatch, getState) => {
     var todosRef = firebaseRef.child('todos');
+
     return todosRef.once('value').then((snapshot) => {
       var todos = snapshot.val() || {};
       var parsedTodos = [];
@@ -62,23 +62,11 @@ export var startAddTodos = () => {
           ...todos[todoId]
         });
       });
+      
       dispatch(addTodos(parsedTodos));
     });
   };
 };
-
-// var todos = {
-//   '123abcd': {
-//     text: 'test'
-//   }
-// }
-//
-// Object.keys(todos) => array of keys
-//
-// [{
-//   id: '123abcd',
-//   text: 'test'
-// }]
 
 export var updateTodo = (id, updates) => {
   return {
