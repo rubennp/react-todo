@@ -10,30 +10,32 @@ firebase.initializeApp(config);
 
 var firebaseRef = firebase.database().ref();
 
-firebaseRef.set({
-  app: {
-    name: 'Todo App',
-    version: '1.0.0'
-  },
-  isRunning: true,
-  user: {
-    name: 'Rubèn',
-    age: 38
-  }
-});
+// firebaseRef.set({
+//   app: {
+//     name: 'Todo App',
+//     version: '1.0.0'
+//   },
+//   isRunning: true,
+//   user: {
+//     name: 'Rubèn',
+//     age: 38
+//   }
+// });
 
 var todosRef = firebaseRef.child('todos');
-todosRef.on('child_added', (snapshot) => {
-  console.log('firebase: child_added', snapshot.key, snapshot.val());
-});
+console.log(todosRef);
 
-todosRef.push({
-  text: 'Walk the dog'
-});
-
-todosRef.push({
-  text: 'Go for a Run'
-});
+// todosRef.on('child_added', (snapshot) => {
+//   console.log('firebase: child_added', snapshot.key, snapshot.val());
+// });
+//
+// todosRef.push({
+//   text: 'Walk the dog'
+// });
+//
+// todosRef.push({
+//   text: 'Go for a Run'
+// });
 
 // var notesRef = firebaseRef.child('notes');
 //
