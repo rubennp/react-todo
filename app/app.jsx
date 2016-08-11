@@ -12,9 +12,7 @@ var TodoAPI = require('TodoAPI');
 store.dispatch(actions.startAddTodos());
 
 // Load foundation
-jQuery(document).ready(function($) {
-  $(document).foundation();
-}); // $(document).foundation();
+$(document).foundation();
 
 // App css
 require('style!css!sass!applicationStyles');
