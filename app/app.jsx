@@ -20,8 +20,10 @@ firebase.auth().onAuthStateChanged((user) => {
 });
 
 // Load Foundation
-$(document).foundation;
-
+// $(document).foundation;
+jQuery(document).ready(function($) {
+  $(document).foundation();
+});
 // App css
 require('style!css!sass!applicationStyles');
 
